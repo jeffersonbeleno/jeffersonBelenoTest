@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { IsNotEmpty, MaxLength, Min } from "class-validator";
+import { IsNotEmpty, MaxLength, IsInt } from "class-validator";
 
 export class CreateTribeDto {
   @IsNotEmpty()
@@ -7,6 +7,7 @@ export class CreateTribeDto {
   @ApiProperty()
   readonly name: string;
 
+  @IsInt()
   @ApiProperty()
   readonly status: number;
 
