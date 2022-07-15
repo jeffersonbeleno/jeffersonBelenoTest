@@ -1,7 +1,7 @@
-import { Organization } from "@prisma/client";
+import { Tribe } from "@prisma/client";
 import { ApiProperty } from "@nestjs/swagger";
 
-export class OrganizationEntity implements Organization {
+export class TribeEntity implements Tribe {
   @ApiProperty()
   readonly id: bigint;
 
@@ -10,4 +10,7 @@ export class OrganizationEntity implements Organization {
 
   @ApiProperty()
   readonly status: number;
+
+  @ApiProperty()
+  readonly organizationId: bigint;
 }
